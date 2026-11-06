@@ -40,19 +40,19 @@ The full rules, including how teaming is judged and what happens when it is foun
 
 ## Screenshots
 
-<sub>Development build with sample data. Names, costs and odds are placeholders.</sub>
+<sub>Development builds with sample data. Names, coins, costs and odds are placeholders.</sub>
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img alt="The H1Z1EU launcher, ready to play" src="assets/screens/01-launcher.png" width="100%"><br><sub>Launcher: sign in with an account key, then play.</sub></td>
-    <td width="50%" valign="top"><img alt="The website home page" src="assets/screens/02-home.png" width="100%"><br><sub>Website home (development build): what the server is and how to join.</sub></td>
+    <td width="50%" valign="top"><img alt="The H1Z1EU launcher, ready to play" src="assets/screens/01-launcher.png" width="100%"><br><sub>Launcher (in development): sign in with an account key, then play.</sub></td>
+    <td width="50%" valign="top"><img alt="The website home page" src="assets/screens/02-home.png" width="100%"><br><sub>Website home: what the server is and how to join.</sub></td>
   </tr>
   <tr>
     <td width="50%" valign="top"><img alt="The kills leaderboard" src="assets/screens/03-leaderboards.png" width="100%"><br><sub>Leaderboards by wipe or all time. Separate solo and duo boards are planned.</sub></td>
-    <td width="50%" valign="top"><img alt="The coin store showing a crate" src="assets/screens/04-store.png" width="100%"><br><sub>Store: coins earned by play, crates with odds.</sub></td>
+    <td width="50%" valign="top"><img alt="The battlepass page with daily challenges" src="assets/screens/04-battlepass.png" width="100%"><br><sub>Battlepass: daily and weekly challenges, earned by play. Nothing on it can be bought.</sub></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img alt="The crate odds page" src="assets/screens/05-odds.png" width="100%"><br><sub>Crate odds: every chance listed and versioned.</sub></td>
+    <td width="50%" valign="top"><img alt="The coin store showing crates and clothing" src="assets/screens/05-store.png" width="100%"><br><sub>Store: coins earned by play, crates with their odds.</sub></td>
     <td width="50%" valign="top"><img alt="The admin account page" src="assets/screens/06-admin.png" width="100%"><br><sub>Admin: accounts, appeals, news and an audit log (sample data).</sub></td>
   </tr>
 </table>
