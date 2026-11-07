@@ -14,7 +14,9 @@ H1Z1EU remains a local development project. There is no public server or downloa
 
 Local checks on 7 November passed all 408 server-plugin tests and all 21 dashboard tests. The targeted outfit and original deck-login checks passed all 23 Node checks; the updated deck-login scenario then passed all 10 Node checks, including the late-arriving deck. Each bot run also confirmed that the creator's separate H1Emu saves were untouched.
 
-These are targeted local results, not a claim that a fresh full suite or a production deployment passed. The last recorded full suite had 733 passing checks out of 735; both failures belonged to the outfit packet-decoding assertion. The current targeted outfit test passes, but it no longer makes that decoding assertion, so the older full-suite result is not a clean bill of health for packet decoding.
+The fresh full bot run on 7 November passed **736/736 recorded checks with zero failures or skips**, in about 30 minutes. That report contains 727 individual tests, 8 suite containers and the separate real-save isolation check. The test server still accepted a protocol login after the run.
+
+This is local development verification, not a production deployment. An earlier strict outfit packet-decoding assertion is no longer present; the green result does not establish that the underlying unknown packet decodes were fixed. That gap remains for separate investigation.
 
 Six launch/window checks, five client-configuration checks and six relay checks passed without starting the game. The real client has also passed login, server selection and world entry. A deck logout/relogin passed in game with 37 collision reports and no lost inventory or position. VPN and tunnel settings were unchanged.
 
@@ -27,7 +29,7 @@ GitHub Actions jobs are currently prevented from starting by an account billing 
 ## Next
 
 - Keep real-client checks repeatable and extend gameplay coverage.
-- Re-run the full bot suite after the latest changes and investigate remaining failures.
+- Investigate the packet-decoding coverage gap and reconcile remaining progress evidence.
 - Continue launch preparation, permissions, source-publication checks and private-beta setup.
 
 This public repository contains reviewed project documentation and screenshots. Private implementation files, game files, credentials and runtime logs are not included.
