@@ -2,15 +2,17 @@
 
 **Built** means the feature exists and has automated tests: bot scenarios for server features, end-to-end tests for the website and launcher. Everything is in development; there is no public server yet.
 
+Updated 7 November 2026. See [development status](DEVELOPMENT.md) for the latest checks and their limits; built does not mean deployed or cleared for release.
+
 ## Solo and duo play
 
 | Feature | Status |
 |---|---|
-| Group size capped at two | Planned |
+| Group size capped at two | Built (server configuration) |
 | Base and lock access limited to you and one partner | Planned |
 | Separate solo and duo leaderboards | Planned |
 | Solo and duo challenges | Planned |
-| Anti-teaming reports and moderation tools | Planned |
+| Anti-teaming reports and moderation tools | Built (reports and admin review queue) |
 | Published solo and duo rules | Planned |
 
 ## Server
@@ -28,9 +30,11 @@
 | Redeem codes | Built |
 | Safe shutdown and reboot countdown | Built |
 | Fair-play checks | In progress |
-| Loot tuning | In progress |
-| Ravens | Planned |
-| Repair box | Planned |
+| Loot tuning | Built; disabled by default |
+| Ravens | Built; disabled by default |
+| Repair box | Built; upkeep retained |
+| Saved outfits worn in game | Built; cosmetic appearance only |
+| Deck-login fall protection | Built; late-loading edge case fixed |
 
 ## Accounts and website
 
@@ -43,9 +47,9 @@
 | Admin panel: accounts, appeals, news, deletions, audit log | Built |
 | Data export and account deletion | Built |
 | Privacy, terms and cookies pages | In progress |
-| Daily and weekly challenges, free battlepass | In progress |
-| Backpack and in-game inventory | Planned |
-| Scrap and dressing room | Planned |
+| Daily and weekly challenges, free battlepass | Built |
+| Backpack and in-game inventory | Built |
+| Scrap and dressing room | Built; saved outfits applied at login and respawn |
 
 ## Launcher
 
@@ -54,7 +58,9 @@
 | Account-key sign-in | Built |
 | Self-update | Built |
 | Network picker and library folder chooser | Built |
-| Installer packaging | Planned |
+| Installer packaging | Built locally; code signing and release work remain |
+| Outfit preview | Built |
+| Proximity voice | In progress; real microphone and key checks remain |
 
 ## Operations
 

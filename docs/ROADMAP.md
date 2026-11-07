@@ -4,18 +4,18 @@ Order may change; no dates are promised.
 
 ## Now
 
-- Challenges and a free-track battlepass, earned by play only.
-- Loot tuning for solo and duo play.
-- A real-client QA bot that plays the game the way a person does.
+- Verify saved outfits and deck-login protection across protocol bots and the real-client QA bot.
+- Reconcile recorded test results and investigate remaining full-suite failures.
+- Finish proximity-voice real-device checks and release preparation.
+
+Challenges, the free battlepass, backpack, scrap and dressing room are implemented locally. Loot tuning and ravens are implemented but disabled by default. See [development status](DEVELOPMENT.md) for current evidence and limitations.
 
 ## Next
 
 - Separate solo and duo leaderboards.
-- Group-size cap and partner-only base and lock access.
-- Ravens, repair box, backpack and in-game inventory.
-- Scrap and dressing room.
+- Partner-only base and lock access beyond the existing group-size cap.
 - Legal pages finished and approved.
-- Installer packaging for the launcher.
+- Code signing and publishing a real launcher release; installer packaging exists locally.
 
 ## Before launch
 

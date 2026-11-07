@@ -19,6 +19,8 @@
 
 > This repository holds documentation and screenshots. Source code will be published here in stages. There is no public server yet.
 
+Latest: [development status and verification, 7 November 2026](docs/DEVELOPMENT.md).
+
 ## What it is
 
 H1Z1EU is a small, non-commercial community server for the December 2016 version of H1Z1: Just Survive, aimed at players in Europe. It is built for players on their own or in pairs: the largest group allowed is two. Coins are earned by playing, every crate shows its odds, and nothing can be bought with money. We run it on the open-source H1Emu emulator, with our own plugin, launcher, website and tooling around it.
