@@ -4,6 +4,9 @@ H1Z1EU remains a local development project. There is no public server or downloa
 
 ## Latest work
 
+- The native-client persistence milestone now verifies logout/relogin and a server restart, including construction attachment/count checks. The fresh run preserved the character's inventory, equipment, position and five nearby constructions.
+- Added an internal searchable command handbook for players and staff, covering local commands and clearly labelled published JSEmu references. It distinguishes permissions, conditional features, developer tools and commands that are not implemented locally.
+
 - Saved dressing-room outfits are applied when a character joins and after respawn. Nearby players receive the appearance too. Cosmetics leave the character's actual equipment and protection unchanged.
 - Fixed an edge case in login fall-damage protection: a deck that arrives near the loading timeout keeps its remaining collision-settling period. Protection expires afterwards; ordinary falls still cause damage.
 - The local operations dashboard now reads actual Codex sessions and model usage. It runs as a normal local program and consumes no AI tokens itself.
