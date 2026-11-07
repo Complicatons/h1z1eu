@@ -16,7 +16,7 @@ Local checks on 7 November passed all 408 server-plugin tests and all 21 dashboa
 
 The fresh full bot run on 7 November passed **736/736 recorded checks with zero failures or skips**, in about 30 minutes. That report contains 727 individual tests, 8 suite containers and the separate real-save isolation check. The test server still accepted a protocol login after the run.
 
-This is local development verification, not a production deployment. An earlier strict outfit packet-decoding assertion is no longer present; the green result does not establish that the underlying unknown packet decodes were fixed. That gap remains for separate investigation.
+That full run predates a separate packet-decoding fix. The strict outfit check is now restored: both the wearer and nearby watcher receive zero undecoded prepacked messages. Client-side readers in the bot harness now decode weapon/projectile reference tables, remote weapon updates and death state, with bounded decompression and payload-length checks. The outfit regression passed all 15 Node checks plus save isolation; six focused decoder tests also passed, including malformed and truncated packets. Named server sends are still inspected before serialization, so this does not claim complete wire coverage or native rendering verification. This remains local development verification, not a production deployment.
 
 Six launch/window checks, five client-configuration checks and six relay checks passed without starting the game. The real client has also passed login, server selection and world entry. A deck logout/relogin passed in game with 37 collision reports and no lost inventory or position. VPN and tunnel settings were unchanged.
 
@@ -24,12 +24,14 @@ The normal-fall control also passed: a 10 metre fall after login grace reduced h
 
 After the interface change, the gateway/patch and deck-login protocol regressions passed all 37 Node checks, followed by the real-save isolation check.
 
+The decoder integration regression also passed all 59 Node checks plus save isolation, covering outfit delivery, login and saved progress, death and respawn, nearby-player cosmetics, and deck fall protection. The local game server continued accepting logins and the operations dashboard responded successfully afterwards.
+
 GitHub Actions jobs are currently prevented from starting by an account billing or spending-limit restriction. Local checks are recorded separately; no successful hosted CI run is claimed.
 
 ## Next
 
 - Keep real-client checks repeatable and extend gameplay coverage.
-- Investigate the packet-decoding coverage gap and reconcile remaining progress evidence.
+- Extend protocol coverage and reconcile remaining progress evidence.
 - Continue launch preparation, permissions, source-publication checks and private-beta setup.
 
 This public repository contains reviewed project documentation and screenshots. Private implementation files, game files, credentials and runtime logs are not included.
