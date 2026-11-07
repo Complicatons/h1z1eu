@@ -8,6 +8,7 @@ H1Z1EU remains a local development project. There is no public server or downloa
 - Fixed an edge case in login fall-damage protection: a deck that arrives near the loading timeout keeps its remaining collision-settling period. Protection expires afterwards; ordinary falls still cause damage.
 - The local operations dashboard now reads actual Codex sessions and model usage. It runs as a normal local program and consumes no AI tokens itself.
 - Client-bot failures now stop instead of repeatedly relaunching the game and opening login-error pages. A local server check runs before launch, and default endpoints stay on the bot's own server.
+- Fixed the real client's local login failure by aligning the client, server and probe on the same interface assigned to the PC. The copied client gets temporary local connection settings with browser-error redirects disabled; original settings are restored afterwards.
 
 ## Verification
 
@@ -15,13 +16,17 @@ Local checks on 7 November passed all 408 server-plugin tests and all 21 dashboa
 
 These are targeted local results, not a claim that a fresh full suite or a production deployment passed. The last recorded full suite had 733 passing checks out of 735; both failures belonged to the outfit packet-decoding assertion. The current targeted outfit test passes, but it no longer makes that decoding assertion, so the older full-suite result is not a clean bill of health for packet decoding.
 
-Four launch-guard checks and six relay checks also passed without starting the game. The bot server accepted a real protocol login, but the real client returned a login error and was stopped. The revised numeric-IP launch path remains unverified in the real game.
+Six launch/window checks, five client-configuration checks and six relay checks passed without starting the game. The real client has also passed login, server selection and world entry. A deck logout/relogin passed in game with 37 collision reports and no lost inventory or position. VPN and tunnel settings were unchanged.
+
+The normal-fall control also passed: a 10 metre fall after login grace reduced health from 10000 to 7393, with the character still alive. This verifies that the deck-login protection does not prevent ordinary fall damage.
+
+After the interface change, the gateway/patch and deck-login protocol regressions passed all 37 Node checks, followed by the real-save isolation check.
 
 GitHub Actions jobs are currently prevented from starting by an account billing or spending-limit restriction. Local checks are recorded separately; no successful hosted CI run is claimed.
 
 ## Next
 
-- Finish real-client verification of deck logins and normal fall damage.
+- Keep real-client checks repeatable and extend gameplay coverage.
 - Re-run the full bot suite after the latest changes and investigate remaining failures.
 - Continue launch preparation, permissions, source-publication checks and private-beta setup.
 
